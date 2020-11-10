@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    // 자료형 주의! 
+    // ver.1
+    const checkfrm1 = function(){
+        document.frm1.result.value = Number(document.frm1.data1.value) + Number(document.frm1.data2.value); 
+    };
+
+    // ver.2
+    const checkfrm2 = function(){
+        let num1 = parseInt(document.frm1.data1.value);
+        let num2 = parseInt(document.frm1.data2.value);
+        let result = num1 + num2;
+
+        document.frm1.result.value = result;
+    };
+    
+</script>
+
+<form action="test1.html" name="frm1">
+    <input type="text" name="data1"/>
+    +
+    <input type="text" name="data2" />
+    <input type="button" value="결과" onclick="checkfrm1()" />
+    <input type="text" name="result" />
+</form>
+
+</body>
+</html>

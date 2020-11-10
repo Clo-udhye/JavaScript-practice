@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">        
+    "use strict"
+
+    // callback구조 : 함수가 함수를 호출하는 구조
+    // 함수의 정의를 값으로 취급해서 호출가능
+    // 현대 - 일급함수 (함수 = 변수)
+    let callback = function(){
+        console.log('콜백함수 호출');
+    };
+
+    let callFunc = function( data ){
+        data();
+    };
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+      callFunc(callback);
+
+</script>
+</body>
+</html>

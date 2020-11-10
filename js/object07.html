@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">  
+    function makeStudent( name, kor, mat ){
+        //데이터와 데이터의 처리 
+        let obj = {
+            name : name,
+            kor : kor,
+            mat : mat,
+
+            getSum : function(){
+                return this.kor + this.mat;
+            },
+            getAverage : function(){
+                return this.getSum() / 2;
+            }
+
+        };
+
+        return obj
+    }
+
+    //stu1 / stu2 = 객체변수 / instance (객체가 담길 변수)
+    let stu1 = makeStudent('홍길동', 96, 88);
+    let stu2 = makeStudent('박문수', 98, 90);
+
+    console.log(stu1);
+    console.log(stu2);
+
+    console.log(stu1.name);
+    console.log(stu2.name);
+    console.log(stu1.getSum());
+    console.log(stu1.getAverage());
+</script>    
+</body>   
+</html>
+

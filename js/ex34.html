@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+        "use strict"
+       
+        //console.log('시작');
+        //문제1. 
+        /*
+        **********
+        **********
+        **********
+        **********
+        **********
+        **********
+        **********
+        **********
+        **********
+        **********
+        */
+
+        /*
+        for(let row=1; row<=10; row++){
+           let result = "";
+           for(let col=1; col<=10; col++){
+            result += "*";
+           }
+           console.log(result);
+       }
+       */
+      
+       /*
+       문제2.
+        *
+        **
+        ***
+        ****
+        *****
+        ******
+        ...
+        **********
+       */
+
+       /*for(let row=1; row<=10; row++){
+           let result = "";
+           for(let col=1; col<=row; col++){
+            result += "*";
+           }
+           console.log(result);
+       }*/
+
+       //문제3. 테이블안에 출력
+       /*
+        document.write('<table border="1" width="400">');
+        for(let row=1; row<=10; row++){
+            document.write('    <tr>');
+            for(let col=1; col<=row; col++){
+                document.write('        <td>*</td>');
+            }
+           document.write('    </tr>');
+        }
+        document.write('</table>');
+
+        document.write('<br /><br />');*/
+
+        document.write('<table border="1" width="400">');
+        for(let row=1; row<=10; row++){
+            document.write('    <tr>');
+            for(let col=1; col<=10; col++){
+                if(col<=row){
+                    document.write('        <td>*</td>');
+                }else{
+                    document.write('        <td> </td>');
+                }
+            }
+           document.write('    </tr>');
+        }
+        document.write('</table>');
+        document.write('<br /><br />');
+
+        //console.log('끝');
+     </script>
+</body>
+</html>

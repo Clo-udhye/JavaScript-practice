@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            "use strict";   //문법 검사를 엄격하게 함
+            //변수의 선언
+            var num1;
+            var num2;
+
+            //값의 할당 : 변수의 초기화 (처음 값을 할당하는 것)
+            num1 = 10;  //= : 할당한다, 같다(x)
+            num2 = 20; 
+
+            console.log(num1);      //num1안의 값을 출력
+            console.log('num1');    //''안의 내용을 그대로 출력
+            document.write('num2 =', num2);
+
+            num1 = 30;              //변수안에는 값이하나만 들어간다
+            console.log(num1);      //기존의 값을 지우고 다시 할당
+
+            //선언과 초기화를 함께할수있음
+            var num3 = 40;
+            console.log(num3);
+
+            var num4;               //초기화하지않고 출력 : undefined
+            console.log(num4);
+
+            //num5 = 50;            //예전에는 var문으로 선언 하지 않아도 가능했으나 
+            var num5 = 50;        //문법적으로 통일하기위해 사용한다.
+            console.log(num5);
+        </script>
+    </body>
+</html>

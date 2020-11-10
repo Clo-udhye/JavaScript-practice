@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 연습</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    div {
+        background-color: tomato;
+        width: 200px;
+        height: 200px;
+
+        border-width: 2px;  /*border 세가지 세트!*/
+        border-style: solid;
+        border-color: black;
+    }
+    /*p   {
+        background-color: thistle;
+        width: 200px;
+        height: 200px;
+        border: 2px dotted black} */   /*한줄로도 가능*/
+        
+    /*p{
+        border-top-style: dotted;
+    }*/
+    p.one{
+        border-style: solid dotted dashed;
+        border-width: 5px 10px; /*top,bottom - side*/
+        border-color: tomato blue yellowgreen purple;
+    }
+    p.two{
+        border-style: solid dotted dashed double;
+        border-width: 10px 5px;
+        border-color:yellowgreen blue purple;
+    }
+    p.three{
+        border-style: solid double;
+        border-width: 15px 10px 4px 25px;   /*top - right - bottom - left*/
+        border-color: tomato purple;
+    }
+    </style>
+</head>
+<body>
+    <!--block tag => 내용+엔터키(줄바꿈)-->
+    <div>Hello CSS</div>
+    <p>Hello CSS</p>
+    <p class="one">Some Text</p>
+    <p class="two">Some Text</p>
+    <p class="three">Some Text</p>
+</body>
+</html>

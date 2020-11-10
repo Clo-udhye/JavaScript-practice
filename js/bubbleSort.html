@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    //버블정렬 
+    /*
+    함수이름 : bubblesort
+    bubblesort (2,3,1,4) => 1, 2, 3, 4 / 4, 3, 2, 1
+    */
+
+    let bubblesort = function(){
+        let result = new Array();
+        let targetIndex = 0;
+        let temp = 0;
+        //console.log(...arguments);
+        for(let j= 0; j<arguments.length-1; j++){
+            targetIndex = 0;
+            for ( let i = 1; i<arguments.length - j; i++){
+                if(arguments[targetIndex]>arguments[i]){
+                    //console.log('target :', arguments[targetIndex],' swap a['+i+'] :', arguments[i]);
+                    temp = arguments[i];
+                    arguments[i] = arguments[targetIndex]
+                    arguments[targetIndex] = temp;
+                }
+                targetIndex = i;
+                //console.log(...arguments);     
+            }
+        }
+        result = [...arguments];
+        return result;
+    }
+
+    let arr1 = [6, 3, 7, 9, 2];
+    let arr2 = [4, 3, 1, 2];
+    console.log(arr1);
+    arr1 = bubblesort(...arr1);
+    console.log(arr1);
+
+</script>    
+</body>
+</html>

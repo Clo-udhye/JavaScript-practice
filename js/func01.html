@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        "use strict"
+        
+        //선언적 함수 = 함수이름 있다..
+        //선언
+
+        //동사(소문자) + 기능(대문자)
+        //전체를 소문자
+        function doFunc1(){
+            console.log('Hello Function');
+        }
+        function doFunc2( data1 ){
+            console.log('doFunc02', data1 );
+        }
+     
+        function doFunc3( data1, data2 ){
+            console.log('doFunc03', data1 );
+            console.log('doFunc03', data2 );
+        }
+        
+        function doFunc4( data1, data2 ){
+            let sum = data1 + data2;
+            return sum;
+            }
+     </script>
+</head>
+<body>
+    <script type="text/javascript">
+        "use strict"
+        //실행
+        doFunc1();
+        doFunc2(10);
+        doFunc3(10, 20);
+
+        let result = doFunc4(20,40);
+        console.log('result', result);
+        console.log('result', doFunc4(100,200));
+
+
+     </script>
+</body>
+</html>

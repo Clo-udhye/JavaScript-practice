@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">        
+    "use strict"
+
+    let rFunc = function(){
+        return function() {
+            console.log('함수 호출');
+        };
+    };
+
+    //상황에 따라 다른 함수를 불러줄 수 있다.
+    let rFunc2 = function( type ){
+        if(type == 1){
+            return function(){
+                console.log('함수 호출1');
+            };
+        } else {
+            return function(){
+                console.log('함수 호출2');
+            };
+        }
+    };
+
+    
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+    let result = rFunc();
+    result();
+
+    rFunc()();
+
+    rFunc2(1)();
+    rFunc2(0)();
+</script>
+</body>
+</html>

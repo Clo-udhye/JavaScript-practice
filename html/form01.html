@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form예제</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form>
+    <!--한줄 입력 내용-->
+    <input type="text" /><br /><br />
+    <input type="text" size="50"/><br /><br />
+    <input type="text" size="50" maxlength="20"/><br /><br /> <!--size : 디자인적 길이, maxlength : 프로그램적 길이-->
+    <input type="text" size="50" maxlength="20" value="초기값" /><br /><br />
+    <input type="text" size="50" maxlength="20" placeholder="입력해주세요." /><br /><br />
+    <input type="text" size="50" maxlength="20" value="초기값" readonly/><br /><br /> <!-- 초기값을 바꿀 수 없음-->
+<hr /> 
+    <!--한줄 입력 내용-->
+    <input type="password" /><br/><br />   
+
+    <!--여러줄 입력 -->
+    <textarea></textarea><br /><br />
+    <textarea row="5" cols="50"></textarea><br /><br />
+    <textarea row="5" cols="50">초기값</textarea><br /><br />
+
+    <hr />
+
+    <!--다중선택-->
+    <input type="checkbox" />사과<br />
+    <input type="checkbox" checked />수박<br />
+    <input type="checkbox" />딸기<br />
+
+    <hr />
+    <!--단일선택-->
+    
+    <input type="radio" name = "r"/>사과<br />
+    <input type="radio" checked name = "r"/>수박<br />
+    <input type="radio" name = "r"/>딸기<br />
+    
+    <hr />
+    <!--단일, 다중-->
+    <select>
+        <option>사과</option>
+        <option selected>수박</option>
+        <option>딸기</option>
+    </select>
+
+    <hr />
+
+    <select multiple>
+        <option>사과</option>
+        <option selected>수박</option>
+        <option>딸기</option>
+    </select>
+
+    <hr />
+    <!--파일 찾기 , 업로드x-->
+    <input type="file" /><br /><br /> 
+
+    <hr />
+    <!--숨긴 데이터, 화면에 보이지 않음-->
+    <input type="hidden" value="초기값">
+
+    <hr />
+    <!--색상 선택, 색상값 RGB(Red(0~255), Green(0~255), Blue(0~255)) 16진수값으로 표기 -->
+    <input type="color" value="#0000ff" /><br /><br /> 
+    <!--날짜 선택-->
+    <input type="date" /><br /><br /> 
+    <input type="date" value="2020-05-05"/><br /><br /> 
+    <!--숫자 입력-->
+    <input type="number" /><br /><br />
+    <input type="number" min="5" max="10" /><br /><br />
+    <input type="number" min="5" max="10" step="2" value="5" /><br /><br />
+
+    <input type="range"  min="5" max="10" /><br /><br />
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+
+    // 1 ~ 45 로또 번호 
+    // console.log(parseInt( Math.random() * 45 ) + 1) ; //0<= 값 <46
+    // !중복값 제거 - 나중에 추가 => 함수화 
+
+    /*document.write('<table border="1" width="600">');
+    for(let row=1; row<=5; row++){
+        document.write('<tr>');
+        let numSet = new Set();
+        do{
+            numSet.add( parseInt( Math.random() * 45 ) + 1 );
+        } while( numSet.size < 6 );
+        let valueObj = numSet.values();
+        for(let col=0; col<=5; col++){
+            document.write('<td>'+ valueObj.next().value +'</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+    */
+
+    const lottofunc = function(){
+        let lottos = new Array();
+        for(let i=1; i<=5; i++){
+            //중복제거
+            let set = new Set();
+            while(true){
+                set.add(parseInt( Math.random() * 45 ) + 1);
+                if (set.size == 6){
+                    break;
+                }
+            }
+            //console.log(set);
+            lottos.push(set);
+        }
+        return lottos;
+    }
+
+    let lottoNum = lottofunc();
+
+    document.write('<table border="1" width="600">');
+    for(let row=0; row<=4; row++){
+       let valueObj = lottoNum[row].values();
+       
+        document.write('<tr>');
+        for(let col=0; col<=5; col++){
+            document.write('<td>');
+            //console.log(valueObj.next().value);
+            document.write(valueObj.next().value);
+            document.write('</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>')
+    
+</script>    
+</body>
+</html>

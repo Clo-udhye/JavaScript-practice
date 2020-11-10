@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    let date1 = new Date( 2020, 11 - 1, 3);    
+    let date2 = new Date( 2020, 11 - 1, 1);
+   
+    //let interval1 = date1 - date2;
+    //시간의 차이는 ms의 차이
+    let interval1 = date1.getTime() - date2.getTime();
+    console.log(interval1);
+
+    //몇일 간격인지 알고싶을때
+    //let dayInterval1 = (((( interval2/1000 ) /60 ) / 60) /24 );
+    let dayInterval1 = interval1 / (1000 * 60 * 60 *24 );
+    console.log(dayInterval1);
+    let dayInterval2 = date1.getDate() - date2.getDate();
+    console.log(dayInterval2);
+
+    let date = new Date();
+    //get / set 
+    date.setDate(date.getDate()+7);    //7일 후로 다시 설정
+    console.log(date.toLocaleString());
+
+    let jsonDate = date.toJSON();
+    console.log(jsonDate);    //문자열로 연결  
+
+</script>    
+</body>
+</html>

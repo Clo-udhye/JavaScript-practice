@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">        
+    "use strict"
+</script>
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    //for문 2개를 이용해서 table(9*9)안에 구구단만들기
+    document.write('<table border="1" width="900">');
+    for(let row=0; row<10; row++ ){
+        document.write('    <tr>')
+        if( row==0 ){
+            for(let col=0; col<10; col++){                    
+                if(col==0){
+                    document.write('        <td> </td>'); 
+                } else {
+                    document.write('        <td> X',col, ' </td>');
+                }
+            }
+        } else{                
+            for(let col=0; col<10; col++){
+                if(col==0){
+                    document.write('        <td>',row,'단 </td>');
+                } else{                        
+                    document.write('        <td>',row,'X',col,'=',(row * col),' </td>');
+                }
+            }
+        }
+        document.write('    </tr>');
+    }        
+    document.write('</table>');
+    document.write('<br /><br />');
+
+
+
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+    table {
+        border : 1px solid black;
+        border-collapse: collapse;
+       
+    }
+
+    td{
+        border : 1px dashed black;
+        width : 100px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    
+    //for문 2개를 이용해서 table(9*9)안에 구구단만들기 - 강사님.ver
+    document.write('<table>');
+    for(let dan=0; dan<=9; dan++){
+        document.write('<tr>');
+            for(let col=0; col<=9; col++){
+                //0행 0열
+                if( dan==0 && col==0 ){
+                    document.write('<td> </td>');    
+                //0행
+                } else if( dan==0 ){
+                    document.write('<td>X' + col +'</td>');
+                //0열
+                } else if( col==0 ){
+                    document.write('<td>'+dan+'단</td>');
+                }else{
+                document.write('<td>' + dan + 'X' + col + ' = ' + (dan * col) + '</td>');
+                }
+            }
+        document.write('</tr>');
+    }
+    document.write('</table');
+</script>
+</body>
+</html>

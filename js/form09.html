@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    // 자료형 주의! 
+    // ver.1
+    const checkfrm1 = function(){
+        let num1 = document.frm1.data1.value;
+        let num2 = document.frm1.data2.value;
+        let oper = document.frm1.oper.value;
+
+        let result = eval( num1  + oper + num2);
+        document.frm1.result.value = result;
+
+    };
+
+    // ver.2
+    const checkfrm2 = function(){
+        let num1 = parseInt(document.frm1.data1.value);
+        let num2 = parseInt(document.frm1.data2.value);
+        let result;
+        if(document.frm1.oper.value =='+'){
+            result = num1 + num2;
+        } else if(document.frm1.oper.value =='-'){
+            result = num1 - num2;
+        } else if(document.frm1.oper.value =='*'){
+            result = num1 * num2;
+        } else{
+            resulit = num1 / num2;
+        } 
+        document.frm1.result.value = result;
+    };
+    
+</script>
+
+<form action="test1.html" name="frm1">
+<input type="text" name="data1"/>
+<select name="oper">
+    <option value="+" selected>+</option> 
+    <option value="-">-</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+</select>
+<input type="text" name="data2" />
+<input type="button" value="결과" onclick="checkfrm1()" />
+<input type="text" name="result" />
+</form>
+
+</body>
+</html>

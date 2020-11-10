@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    const removeTag1 = function(){
+        let div = document.getElementById('div');
+        //소스 상에는 남아있으나, 메모리상에서 지워짐 
+        document.body.removeChild( div );   //body에서 child를 지워라 
+    }
+
+    const removeTag2 = function(){
+        let div = document.getElementById('div');
+        let header1 = document.getElementById('h1');
+        div.removeChild( header1 );   //div에서 child를 지워라 
+    }
+
+</script>  
+<input type="button" value="div 태그 제거" onclick="removeTag1()" /> 
+<input type="button" value="h1 태그 제거" onclick="removeTag2()" />
+
+<div id="div">
+    <h1 id="h1">Header 1</h1>
+    <h1 id="h2">Header 2</h1>
+</div> 
+</body>
+</html>

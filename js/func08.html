@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    let data1 = '10';
+    let data2 = '20';
+
+    let sum1 = data1 + data2;
+    console.log(sum1);    
+    
+    // 형변환
+    let sum2 = Number(data1) + Number(data2); 
+    console.log(sum2);
+
+
+    //NaN(Not a Number), 숫자형태가 될 수 없다. 형변환x
+    let data3 = Number('20일');
+    console.log(data3);
+
+    // 문자열이 붙어있어도 숫자형으로 변환가능 '20일' -> 20
+    // 앞에서부터 숫자인 부분만을 숫자형으로 변환 '일20' -> NaN
+    let data4 = parseInt('20일');
+    console.log(data4);
+
+    let data5 = parseInt('11월20일'); // -> 11
+    console.log(data5);
+</script>
+</body>
+</html>

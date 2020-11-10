@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    /*
+    다국어의 URL Encoding / Decoding
+    */
+
+    let str = '코로나19';
+    let enStr = encodeURIComponent( str );
+
+    //https://search.naver.com/search.naver?query=%EC%BD%94%EB%A1%9C%EB%82%9819
+    console.log( enStr ); 
+
+    let deStr = decodeURIComponent ( enStr );
+    console.log( deStr );
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+</head>    
+<body>
+<script type="text/javascript">
+    /*
+        함수이름 : jumincheck
+        jumincheck(123456-1234567)
+        *String 클래스 메서드 사용
+        문자 -> 숫자 변환 
+            Number
+            parseInt
+    */
+
+    /*
+    0  ->8
+    1  ->9
+
+    2  ->2
+    3  ->3
+    4  ->4
+    5  ->5
+    */
+    //["123456","1234567"] => [ [1,2,3,4,5,6],[1,2,3,4,5,6,7] ]
+
+    let juminCheck = function(juminNumber){
+        let number = juminNumber.split('-');
+        //console.log(number);
+        let sum = 0;
+        for (let i in number[0]){
+            //console.log(number[0][i]);
+            sum += Number(number[0][i]) * (Number(i) + 2 );
+            //console.log(i);
+            //console.log(Number(number[0][i]) ,'X', (Number(i)+2) , ' = ' ,Number(number[0][i]) * (Number(i) + 2 ));
+        }
+
+        for (let i in number[1]){
+            if( Number(i) < 2){
+                sum += Number(number[1][i]) * (Number(i) + 8 ); 
+                //console.log(Number(number[1][i]) ,'X', (Number(i)+8) , ' = ' ,Number(number[1][i]) * (Number(i) + 8 ));
+            } else if (Number(i) < 6) {
+                sum += Number(number[1][i]) * Number(i); 
+                //console.log(Number(number[1][i]) ,'X', (Number(i)) , ' = ' ,Number(number[1][i]) * Number(i));
+            }
+        }
+
+        //console.log(sum);
+        sum = 11 - (sum % 11);
+        sum = sum % 10;
+
+        if(sum == number[1][6]){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    console.log(juminCheck("123456-1234567"));
+
+</script>
+</body>
+</html>
+
+

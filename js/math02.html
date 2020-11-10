@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+   
+    console.log(Math.max(52, 273, 67, 32));
+    console.log(Math.min(52, 273, 67, 32));
+
+    /* 
+    문제 1. 일련의 숫자중 최대값을 구하는 함수 작성 
+    함수이름 : maxvalue
+    */
+    let maxvalue = function(){
+        let max = arguments[0];
+        for(let i in arguments){
+            if(max < arguments[i]){
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+    //강사님 코드 
+    const maxvalue1 = function(){
+        let maxvalue = 0;
+        for(const value of arguments){
+            if(value >= maxvalue){
+                maxvalue = value;
+            }
+        }
+        return maxvalue;
+    }
+
+    console.log(maxvalue(52, 273, 67, 32, 888));
+    console.log(maxvalue1(52, 273, 67, 32, 888));
+
+</script>    
+</body>
+</html>

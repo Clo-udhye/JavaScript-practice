@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+        const viewTag = function(){
+        //window.onload = function(){
+            //console.log( document.getElementById('first'));
+            //console.log( document.getElementsByTagName('div'));
+            let tags = document.getElementsByTagName('div');    //배열로 리턴
+            console.log(tags[0]);
+        };
+</script>
+
+<input type="button" value="태그 읽기" onclick="viewTag()" />
+
+<hr / > <!--가로줄 긋기-->
+
+<!--id중복 x-->
+<!--tagName은 복수일수있어서 배열처럼 사용-->
+<div id="first">첫 번째 div</div>
+<div id="second">두 번째 div</div>
+<div id="third">세 번째 div</div>   
+</body>
+</html>

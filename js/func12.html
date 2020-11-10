@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    /*let cmd = function(){
+        console.log( '3초 후에 실행' );
+    };*/
+
+    /*setInterval( function(){
+        console.log( '3초 후에 실행' );
+    } , 3000 );*/
+    
+    console.log('시작');
+
+    let intervalId = setInterval( function(){
+        console.log( new Date());
+    } , 1000 );
+
+    setTimeout (function(){
+        clearInterval( intervalId );
+    }, 10000);
+    
+
+    console.log('끝');
+</script>
+</body>
+</html>

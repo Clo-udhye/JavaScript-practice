@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            "use strict";
+
+            //hour변수선언 , 
+	        //12시 이전이면 아침 
+	        //12시 이후이면 저녁라고 출력
+            
+            //중첩 if문 
+            console.log('시작'); 
+
+            let hour = 16;
+            
+            if( hour <= 12){
+                if(hour<=9){
+                    console.log( '아침' );
+                } else{
+                    console.log('아점');
+                }
+            } else{
+                if(hour<=18){
+                    console.log( '점저' );
+                } else{
+                    console.log( '저녁' );
+                }
+            }
+
+            console.log('끝');
+        </script>
+    </body>
+</html>

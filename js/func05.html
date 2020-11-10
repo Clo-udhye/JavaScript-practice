@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">        
+    "use strict"
+
+    //중첩함수 / 내부함수
+    let outer = function(){
+        //함수 안의 내용이 복잡해질 때 사용
+        let inner1 = function(){
+            console.log('inner1 호출');
+        };
+
+        let inner2 = function(){
+            console.log('inner2 호출');
+        };
+
+        inner1();
+        inner2();
+    };
+    
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    outer();
+</script>
+</body>
+</html>

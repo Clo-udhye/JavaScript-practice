@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    //문제1. 5초 후에 자동적으로 m.daum.net 페이지가 열리는 함수 autoOpenWindow 만들기
+
+    //사용자 정의 함수
+    const autoOpenWindow = function(){ 
+        //alert('함수 호출');
+        setTimeout( function(){
+            let option = 'top=100, left=300, width=600, height=800';
+            open('https://m.daum.net', 'openwin', option );
+        }, 5000);
+    }
+    const autoCloseWindow = function(){ 
+        let option = 'top=100, left=300, width=600, height=800';
+        let child = open('./subwin.html', 'openwin', option );
+       
+        setTimeout( function(){
+            child.close();
+        }, 5000);
+    }
+
+</script>
+<!--html에서 특정 함수 호출하는 방법-->
+<a href="javascript:autoCloseWindow()">함수 호출</a><br / ><br />
+<input type="button" value="함수호출" onclick="autoCloseWindow()" />     
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head> 
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    let gugudan = function(){
+        document.write('<table border="1" width="800" >');
+        for(let j=0; j<arguments.length; j++){
+            document.write('<tr>');
+            for(let i=1; i<=9; i++){
+                document.write('<td>',arguments[j],'X',i,'=',(arguments[j]*i),'</td>')
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    }
+
+    let gugudan_ex = function(){
+        let str = '';
+        str += '<table border="1">';
+        
+        for (let dan=0; dan<arguments.length; dan++){
+            str += '<tr>';
+            for( let i=1; i<=9; i++){
+                str += '<td>' + arguments[dan] + 'X' + i + ' = ' + (arguments[dan]*i) + '</td>';
+            }
+            str += '</td>';
+        }
+        str += '</table>';
+        return str;
+    }
+
+    gugudan(1, 3, 5);
+
+
+    document.write('<br /><br />')
+    document.write(gugudan_ex(3,5,7));
+   
+
+</script>
+</body>
+</html>

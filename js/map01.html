@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    //[]  index / 값 : 배열
+    //{}  프로퍼티 / 값 : 객체
+    //[]  프로퍼티 / 값 : Map
+
+    let emptyMap = new Map();
+    console.log(typeof emptyMap);   //-> object
+    console.log(emptyMap);          
+
+    //프로그램의 속성 설정 저장할때 사용
+    let map = new Map([     //key가 index처럼 쓰인다
+        ['key1', 'value1'],
+        ['key2', 'value2'],
+        ['key3', 'value3'],
+        ['key4', 'value4']
+    ]);
+
+    console.log(map);
+    console.log(map.size);  //map의 크기 
+
+    for( let element of map ){  // [ [k1,v1], [k2,v2], [k3,v3] ]
+        //console.log( element );
+        console.log( element[0], element[1] );
+    }
+</script>    
+</body>
+</html>

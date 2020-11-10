@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    let output='';
+    //window.open();
+    //open('url', '창이름', '옵션');
+    //open('https:www.daum.net');
+    //옵션 : top/left, wudth, height
+
+    //open('https:m.daum.net', 'openwin', 'top=100, left=300, width=600, height=800');
+
+    
+    let top1 = 100;
+    let left = 300;
+    let width = 600;
+    let height = 800;
+    //let option = 'top='+ top1 + ', left='+ left +', width='+ width + ', height='+ height;
+    //let option = 'top=100, left=300, width=600, height=800';
+    let option = `top=${top1}, left=${left}, width=${width}, height=${height}`;
+    //open('https://m.daum.net', 'openwin', option);
+    let child = open('./subwin.html', 'openwin', option);   //새로운 창에 대한 정보 저장
+    const moveWindow = function(){
+        //child.moveBy( 100, 10 );    //x축(가로)으로 100, y축(세로)으로 10 만큼 창 이동 
+        child.moveTo( 10, 10 );     //x = 10, y = 10 로 창이동
+    }
+</script>    
+<!--html에서의 함수 호출법-->
+<input type="button" value="움직이기" onclick="moveWindow()" />
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    //json  - 객체표기법
+    let obj1= {
+        name : '홍길동',
+        gender : 'Male'
+    };
+
+    console.log( obj1 );
+    console.log( typeof obj1 );
+
+    let str = JSON.stringify( obj1 ); //json 형태 그대로 문자열화 
+    console.log( str );
+
+    //let obj2 = JSON.parse( str );   //string을 json형태로 바꿔 객체생성 
+    let obj2 = eval('(' + str + ')'); //옛날 방식  eval : 문자열로 정의된 javascript를 동적으로 실행
+    console.log( obj2 );
+    console.log( obj2.name );
+</script>    
+</body>
+</html>

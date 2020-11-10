@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>       
+    <meta charset="utf-8" />
+</head>
+<body>        
+<script type="text/javascript">  
+    //String    p.143 참고
+    //string 객체 생성 방법 2가지 (사용법은 동일)
+    let stringFromLiteral = 'Hello string';
+    let stringFromConstructor = new String('Hello string');
+
+    console.log(stringFromLiteral);     // 문자열
+    console.log(stringFromConstructor); // 객체
+
+    let str1 = 'Hello World 안녕 Hello';
+    console.log(str1.length); //문자열의 길이
+    
+    //문자열에서 문자를 추출
+    let char1 = str1.charAt(0); //1번째 문자
+    console.log( char1 );
+    let char2 = str1.charAt(1); //2번째 문자
+    console.log( char2 );
+    let char3 = str1.charAt(str1.length-1); //맨 마지막 문자
+    console.log( char3 );
+
+    //문자열 추출
+    // substr / substring / slice
+    console.log(str1.substr(5, 6));     //substr(시작인덱스, 길이)
+    console.log(str1.substring(6, 11)); //substring(시작인덱스, 끝인덱스)   /시작~/끝
+    console.log(str1.slice(6,11));      // ==>위와 같음, slice(시작인덱스, 끝인덱스)
+    
+    //검색
+    console.log(str1.indexOf('l'));     // =>indexOf('1', 0 )
+    console.log(str1.indexOf('l', 4));  //4인덱스의 값부터 가장처음나오는 'l'의 인덱스
+    console.log(str1.lastIndexOf('l')); //마지막 문자부터 검색
+    console.log(str1.indexOf('z'));     //없을때 : -1
+    
+    //치환
+    console.log(str1.replace('Hello', '안녕'));  //문자열에서 가장 먼저나오는 Hello를 찾아서 안녕으로 바꾸기
+    console.log(str1.replace(/Hello/g, '안녕')); //문자열 전체에서 Hello를 찾아서 안녕으로 바꾸기 
+    
+    //대소문자 변환
+    console.log('ABC'.toLowerCase());
+    console.log('abc'.toUpperCase());
+    /*let cstr = 'ABC';
+    console.log(cstr.toLowerCase());*/      //==> 위와 같음, 메모리 상으로 객체가 생성되는것은 똑같기 때문에 가능
+
+    //문자열 연결 : +
+    console.log(str1.concat(1,2,3));    //str1뒤에 연결한 새로운 객체를 만드는 것 str1이 변경되지는 않는다
+    /*
+    str1.concat(1,2,3);
+    console.log(str1);
+    */
+
+    //문자열 분리 - 배열로 return
+    //, 구분자
+    let sstr = '사과,딸기,수박';
+    let arr1 = sstr.split(',');     //sstr을 ','로 분리
+    console.log(arr1);
+
+    for( let i in arr1){
+        console.log(arr1[i]);
+    }
+    
+</script>
+</body>   
+</html>

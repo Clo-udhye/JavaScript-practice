@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    //"use strict"    
+    // 동적 추가 / 삭제 
+    let product1 = {};
+    console.log(product1);
+
+    product1.name = '7D 건조망고'; //객체 안의 키와 값을 밖에서 추가 가능
+    product1.type = '당절임';
+    console.log(product1);
+
+    product1.eat = function(){
+        console.log("맛있게 먹는다.");
+    }
+    product1.test = function(){
+        console.log("테스트 한다.");
+    }
+
+    console.log(product1);
+
+    delete( product1.name );
+    delete( product1.test )
+    console.log(product1);
+
+</script>    
+</body>   
+</html>
+

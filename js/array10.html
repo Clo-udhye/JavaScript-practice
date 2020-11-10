@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    //let [ one, , four ] = [ 1, 2, 3, 4 ];   //콤마(,)로 건너뛰고 할당 가능
+    //let [ one, , , four ] = [ 1, 2, 3, 4 ];   
+    // spread연산자(...) : 나머지 전부
+    let [ one, two, ...four ] = [ 1, 2, 3, 4 ];  
+    console.log( one, two );
+    console.log(four);
+    console.log(four[0], four[1]);
+    
+</script>    
+</body>   
+</html>
+

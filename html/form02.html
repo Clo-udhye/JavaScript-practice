@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form예제2</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <!--
+        http://192.168.0.14:8080/html/test.html?data1=a&data2=b&data3=c
+        처리할 페이지명 : 
+        http://192.168.0.14:8080/html/test.html
+        ?
+        데이터: (key = 값)
+        data1=a
+        &
+        data2=b
+        &
+        data3=c
+
+        https://search.naver.com/search.naver?sm=top_sug.pre&fbm=0&acr=1&acq=covi&qdt=0&ie=utf8
+        &
+        query=starwars
+    -->
+    <form action="test.html" method="get">
+        <input type="text" name="data1" />
+        <input type="text" name="data2" />
+        <input type="text" name="data3" />
+        <!--제출 버튼 클릭하면 입력내용을 가지고 test.html(action)로 이동-->
+        <input type="submit" value="전송하기"/>
+    </form>
+</body>
+</html>

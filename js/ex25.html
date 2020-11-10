@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            "use strict";
+
+            console.log('시작');
+
+            let num = 20;
+            //영역적 비교x , 같은지 비교
+            switch(num) {
+                case 10:
+                    console.log( '10' );
+                    break;                  //break가 없으면 아래를 전부 실행
+                case 20:
+                    console.log( '20' );      
+                    break;
+                case 30:
+                    console.log( '30' );          
+                    break;
+                default:
+                    console.log( '기타' );
+            }
+            
+            console.log('끝');
+        </script>
+    </body>
+</html>

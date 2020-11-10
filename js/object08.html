@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">  
+    // 생성자 (constructor)
+    // 대문자로 시작
+    function Student( name, kor, mat ){
+        this.name = name;
+        this.kor = kor;
+        this.mat = mat;
+
+        this.getSum = function(){
+                return this.kor + this.mat;
+        };
+        this.getAverage = function(){
+                return this.getSum() / 2;
+        };
+    }
+
+    let stu1 = new Student( '홍길동', 94, 88 );
+    let stu2 = new Student( '박문수', 98, 90 );
+
+    console.log(stu1);
+    console.log(stu2);
+
+    console.log(stu1.name);
+    console.log(stu2.getSum());
+
+</script>
+</body>   
+</html>
+

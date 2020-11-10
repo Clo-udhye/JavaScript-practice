@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+</head>    
+<body>
+<script type="text/javascript">
+    /*
+        함수이름 : initcap
+        inicap("hong gil dong") => Hong Gil Dong
+        hong    = h(-H) + ong 
+        gil     = g(-G) + il
+        dong    = d(-D) + ong    
+        *String 클래스 메서드 사용 
+    */
+    
+    /*let initcap1 = function(name){
+        let result = '';
+        //let result = new String('');
+        let str = name.split(' ');
+        for(let i in str){
+            //console.log(str[i][0]);
+            //console.log(str[i].substring(0, 1).toUpperCase())
+            //str[i][0] = str[i].substring(0, 1).toUpperCase();     //str[i][0] ==> read only!!
+            //str[i].replace(str[i][0], str[i].substring(0, 1).toUpperCase());
+           
+        }
+        for(let i in str){
+           result += str[i] + ' ';
+        }
+        return result;
+    }*/
+    
+
+    const initcap = function( sentence ){
+        let words = sentence.split(' ');
+        //console.log(words);
+        let result = ''
+        for(let i in words){
+            //comsole.log(words[i]);
+            //console.log(words[i].substring( 0 , 1).toUpperCase());
+            //console.log(words[i].substring(1));
+            result += words[i].substring(0,1).toUpperCase() + words[i].substring(1) + ' ';
+        }
+        return result;
+    }
+    console.log(initcap('hong gil dong'));
+
+</script>
+</body>
+</html>

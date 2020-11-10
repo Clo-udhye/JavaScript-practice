@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    let vfunc1 = function( data1, data2 ){
+        console.log( data1, data2 )
+    }
+
+    let vfunc2 = function( data1, data2, data3 ){
+        console.log( data1, data2, data3 )
+    }
+
+    let vfunc = function(){
+        //let arguments = [10,20];
+
+        console.log( arguments.length );
+        //console.log( arguments[0]);
+        //console.log( arguments[1]);
+        for( let i=0; i<arguments.length; i++){
+            console.log( arguments[i] );
+        }
+    }
+
+    //함수의 인자 갯수와 맞지 않을때
+    vfunc1( 10, 20 );       //-> 10 20
+    vfunc1( 10, 20, 30 );   //-> 10 20
+
+    //인자의 갯수가 맞는 함수를 새로 정의 해줘야 한다  
+    vfunc2( 10, 20, 30);
+
+    //인자가 함수에 배열 처럼 전달 => arguments로 접근
+    vfunc();
+    vfunc(10);
+    vfunc(10, 20); 
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

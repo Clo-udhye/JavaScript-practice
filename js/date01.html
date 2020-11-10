@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />    
+</head>    
+<body>
+<script type="text/javascript">
+    let today = new Date();         //인자가 없을때는 시스템적 현재 시간
+    console.log(today);
+    console.log(today.toString());
+    console.log(today.toLocaleString());    //날자 한글 표현
+
+    let strDate = today.toString();
+    console.log(strDate.substring(0, 13));
+
+    console.log(today.getFullYear());       
+    console.log(today.getMonth()+1);    //month 데이터가 0부터 시작 (1월 :  0)
+    console.log(today.getDate());
+    console.log(today.getDay());        //요일 데이터 (일 : 0 ~ )
+
+    //시간
+    console.log(today.getHours());
+    console.log(today.getMinutes());
+    console.log(today.getSeconds());
+
+    //time stamp
+    //1970년 1월 1일 12시 자정 (unix data) = 0
+    //현재까지의 ms (1/1000 sec)
+    console.log(today.getTime());
+
+</script>    
+</body>
+</html>
